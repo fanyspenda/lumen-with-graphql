@@ -8,6 +8,10 @@ class Post extends Model{
     protected $fillable = [
         'id', 'title', 'content', 'created_at', 'updated_at'
     ];
+
+    protected $hidden = [
+        'content'
+    ];
 }
 
 ?>

@@ -125,9 +125,11 @@ return [
         'default' => [
             'query' => [
                 //query ditulis di sini
-                'PostQuery' => App\GraphQL\Query\PostQuery::class
+                // 'PostQuery' => App\GraphQL\Query\PostQuery::class,
+                'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class
             ],
             'mutation' => [
+                // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
         ]
@@ -184,7 +186,11 @@ return [
 
      //type ditulis di sini
     'types' => [
-        App\GraphQL\Type\PostType::class
+        // App\GraphQL\Type\PostType::class,
+
+        //Monitor
+        'IMonitor' => App\GraphQL\Type\Monitor\IMonitor::class,
+        'IDisplay' => App\GraphQL\Type\Monitor\IDisplay::class
     ],
 
     /*

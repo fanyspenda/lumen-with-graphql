@@ -43,12 +43,15 @@ class PostType extends GraphQLType
     //hanya fungsi mengubah return dari kolom updated_at dan created_at
     //menjadi string agar tidak error ketika dipanggil melalui graphiql
     protected function resolveCreatedAtField($root, $args)
-      {
-        return (string) $root->created_at;
-      }
+    {
+      return (string) $root->created_at;
+    }
 
-      protected function resolveUpdatedAtField($root, $args)
-      {
-        return (string) $root->updated_at;
-      }
+    protected function resolveUpdatedAtField($root, $args)
+    {
+      return (string) $root->updated_at;
+    }
 }
+
+
+// QwphAfTB7tLLKdzZbJ09yniwg8uqyZKKH71uSEHbDC1Bx9TgVyUuPN61l0YkPVck7UCKifEHjKKfu46nzfTSEkpMUrvU3J4ybBPpKGk5Y7pDBmSxJQpgVTPGZkoIV4G9RoMfXxgp9S3GAkgTCfuGfi
