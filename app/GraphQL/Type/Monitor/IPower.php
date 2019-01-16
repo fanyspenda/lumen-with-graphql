@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Power;
+use App\Models\Monitor\Power;
 
 class IPower extends Mutation
 {

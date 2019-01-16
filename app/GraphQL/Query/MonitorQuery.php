@@ -8,7 +8,7 @@ use Folklore\GraphQL\Support\Query;
 
 //ini nama model yang sudah dibuat
 // use App\Display;
-use App\Monitor;
+use App\Models\Monitor\Monitor;
 
 class MonitorQuery extends Query
 {

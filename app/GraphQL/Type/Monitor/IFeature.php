@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Feature;
+use App\Models\Monitor\Feature;
 
 class IFeature extends Mutation
 {

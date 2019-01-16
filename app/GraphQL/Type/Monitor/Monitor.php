@@ -4,12 +4,12 @@ namespace App\GraphQL\Type\Monitor;
 use \GraphQL\Type\Definition\Type;
 use \Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
-use App\Display;
-use App\Connectivity;
-use App\Feature;
-use App\Dimension;
-use App\Power;
-use App\General;
+use App\Models\Monitor\Display;
+use App\Models\Monitor\Connectivity;
+use App\Models\Monitor\Feature;
+use App\Models\Monitor\Dimension;
+use App\Models\Monitor\Power;
+use App\Models\Monitor\General;
 
 class Monitor extends GraphQLType{
     

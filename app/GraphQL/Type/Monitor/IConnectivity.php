@@ -5,7 +5,8 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Connectivity;
+
+use App\Models\Monitor\Connectivity;
 
 class IConnectivity extends Mutation
 {

@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Display;
+use App\Models\Monitor\Display;
 
 class IDisplay extends Mutation
 {

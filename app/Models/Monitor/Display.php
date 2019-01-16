@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App\Models\Monitor;
 
 use Illuminate\Database\Eloquent\Model;
 

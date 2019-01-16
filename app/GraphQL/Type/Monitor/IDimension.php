@@ -5,7 +5,8 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Dimension;
+
+use App\Models\Monitor\Dimension;
 
 class IDimension extends Mutation
 {
