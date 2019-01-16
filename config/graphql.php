@@ -126,9 +126,16 @@ return [
             'query' => [
                 //query ditulis di sini
                 // 'PostQuery' => App\GraphQL\Query\PostQuery::class,
-                'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class
+                'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class,
+                'CameraQuery' => App\GraphQL\Query\CameraQuery::class
             ],
             'mutation' => [
+                //input monitor
+                'IDisplay' => App\GraphQL\Type\Monitor\IDisplay::class,
+                'IConnectivity' =>App\GraphQL\Type\Monitor\IConnectivity::class,
+                'IFeature'=>App\GraphQL\Type\Monitor\IFeature::class,
+
+
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
@@ -189,8 +196,15 @@ return [
         // App\GraphQL\Type\PostType::class,
 
         //Monitor
-        'IMonitor' => App\GraphQL\Type\Monitor\IMonitor::class,
-        'IDisplay' => App\GraphQL\Type\Monitor\IDisplay::class
+        'Monitor' => App\GraphQL\Type\Monitor\Monitor::class,
+        'Display' => App\GraphQL\Type\Monitor\Display::class,
+        'Connectivity' => App\GraphQL\Type\Monitor\Connectivity::class,
+        'Feature' => App\GraphQL\Type\Monitor\Feature::class,
+        'Dimension' => App\GraphQL\Type\Monitor\Dimension::class,
+
+        //camera
+        'ICamera' => App\GraphQL\Type\Camera\ICamera::class,
+        'IVideo' => App\GraphQL\Type\Camera\IVideo::class
     ],
 
     /*
