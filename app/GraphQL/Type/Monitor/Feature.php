@@ -8,7 +8,7 @@ class Feature extends GraphQLType{
     
     protected $attributes = [
 		'name'				=> 'Feature',
-		'description' 		=> 'Melihat Daftar Feature',
+		'description' 		=> 'Tipe untuk query dan mutation tabel Feature',
     ];
     
     // protected $inputObject = true;

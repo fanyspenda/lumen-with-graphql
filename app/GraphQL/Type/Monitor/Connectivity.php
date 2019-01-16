@@ -8,7 +8,7 @@ class Connectivity extends GraphQLType{
     
     protected $attributes = [
 		'name'				=> 'Connectivity',
-		'description' 		=> 'Melihat Daftar Connectivity',
+		'description' 		=> 'Tipe untuk query dan mutation Connectivity',
     ];
     
     // protected $inputObject = true;

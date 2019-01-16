@@ -8,12 +8,14 @@ use App\Display;
 use App\Connectivity;
 use App\Feature;
 use App\Dimension;
+use App\Power;
+use App\General;
 
 class Monitor extends GraphQLType{
     
     protected $attributes = [
 		'name'				=> 'Monitor',
-		'description' 		=> 'Melihat daftar Monitor',
+		'description' 		=> 'Tipe untuk query dan mutation tabel Monitor',
 	];
 
     // protected $inputObject = true;
@@ -33,8 +35,17 @@ class Monitor extends GraphQLType{
             'id_dimension' => [
                 'type' => Type::nonNull(Type::int()),
             ],
+            'id_power' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_general'=> [
+                'type' => Type::nonNull(Type::int()),
+            ]
         ];
         return [
+            'id' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
             'connectivity' => [
                 'type' => Type::listOf(GraphQL::type('Connectivity')),
               ],
@@ -46,7 +57,13 @@ class Monitor extends GraphQLType{
             ],
             'dimension' => [
                 'type' => Type::listOf(GraphQL::type('Dimension')),
-            ]
+            ],
+            'power' => [
+                'type' => Type::listOf(GraphQL::type('Power')),
+            ],
+            'general' => [
+                'type' => Type::listOf(GraphQL::type('General')),
+            ],
         ];
     }
 
@@ -70,5 +87,13 @@ class Monitor extends GraphQLType{
     public function resolveDimensionField($root, $args)
     {
         return Dimension::where('id', $root->id_dimension)->get();
+    }
+    public function resolvePowerField($root, $args)
+    {
+        return Power::where('id', $root->id_power)->get();
+    }
+    public function resolveGeneralField($root, $args)
+    {
+        return General::where('id', $root->id_general)->get();
     }
 }

@@ -8,7 +8,7 @@ class Dimension extends GraphQLType{
     
     protected $attributes = [
 		'name'				=> 'Dimension',
-		'description' 		=> 'Melihat Daftar Dimension',
+		'description' 		=> 'Tipe untuk query dan mutation tabel Dimension',
     ];
     
     // protected $inputObject = true;

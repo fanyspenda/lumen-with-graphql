@@ -8,7 +8,7 @@ class Display extends GraphQLType{
     
     protected $attributes = [
 		'name'				=> 'Display',
-		'description' 		=> 'Melihat Daftar Display',
+		'description' 		=> 'Tipe untuk query dan mutation tabel Display',
     ];
     
     // protected $inputObject = true;

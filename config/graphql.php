@@ -132,9 +132,11 @@ return [
             'mutation' => [
                 //input monitor
                 'IDisplay' => App\GraphQL\Type\Monitor\IDisplay::class,
-                'IConnectivity' =>App\GraphQL\Type\Monitor\IConnectivity::class,
-                'IFeature'=>App\GraphQL\Type\Monitor\IFeature::class,
-
+                'IConnectivity' => App\GraphQL\Type\Monitor\IConnectivity::class,
+                'IFeature'=> App\GraphQL\Type\Monitor\IFeature::class,
+                'IDimension' => App\GraphQL\Type\Monitor\IDimension::class,
+                'IPower' => App\GraphQL\Type\Monitor\IPower::class,
+                'IGeneral'=> App\GraphQL\Type\Monitor\IGeneral::class,
 
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
@@ -201,6 +203,8 @@ return [
         'Connectivity' => App\GraphQL\Type\Monitor\Connectivity::class,
         'Feature' => App\GraphQL\Type\Monitor\Feature::class,
         'Dimension' => App\GraphQL\Type\Monitor\Dimension::class,
+        'Power' => App\GraphQL\Type\Monitor\Power::class,
+        'General' => App\GraphQL\Type\Monitor\General::class,
 
         //camera
         'ICamera' => App\GraphQL\Type\Camera\ICamera::class,
