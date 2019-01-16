@@ -5,6 +5,7 @@ use \GraphQL\Type\Definition\Type;
 use \Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 use App\Models\PC\Computing_system;
+use App\Models\PC\Graphic;
 
 class PC extends GraphQLType{
     protected $attributes = [
@@ -41,9 +42,9 @@ class PC extends GraphQLType{
             'computing_system' => [
                 'type' => Type::listOf(GraphQL::type('Computing_system')),
             ],
-            // 'graphics' => [
-            //     'type' => Type::listOf(GraphQL::type('Graphics')),
-            // ],
+            'graphics' => [
+                'type' => Type::listOf(GraphQL::type('Graphics')),
+            ],
             // 'storage' => [
             //     'type' => Type::listOf(GraphQL::type('Storage')),
             // ],
@@ -62,5 +63,10 @@ class PC extends GraphQLType{
     public function resolveComputingSystemField($root, $args)
     {
         return Computing_system::where('id', $root->id_computing_system)->get();
+    }
+
+    public function resolveGraphicsField($root, $args)
+    {
+        return Graphic::where('id', $root->id_graphics)->get();
     }
 }

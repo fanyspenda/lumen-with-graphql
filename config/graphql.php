@@ -141,6 +141,7 @@ return [
 
                 //input PC
                 'IComputing_system' => App\GraphQL\Type\PC\IComputing_system::class,
+                'IGraphics'=> App\GraphQL\Type\PC\IGraphics::class,
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
@@ -203,6 +204,7 @@ return [
         //PC
         'PC' => App\GraphQL\Type\PC\PC::class,
         'Computing_system' => App\GraphQL\Type\PC\Computing_system::class,
+        'Graphics'=> App\GraphQL\Type\PC\Graphics::class,
 
         //Monitor
         'Monitor' => App\GraphQL\Type\Monitor\Monitor::class,
