@@ -127,6 +127,7 @@ return [
                 //query ditulis di sini
                 // 'PostQuery' => App\GraphQL\Query\PostQuery::class,
                 'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class,
+                'PcQuery' => App\GraphQL\Query\PcQuery::class,
                 'CameraQuery' => App\GraphQL\Query\CameraQuery::class
             ],
             'mutation' => [
@@ -138,6 +139,8 @@ return [
                 'IPower' => App\GraphQL\Type\Monitor\IPower::class,
                 'IGeneral'=> App\GraphQL\Type\Monitor\IGeneral::class,
 
+                //input PC
+                'IComputing_system' => App\GraphQL\Type\PC\IComputing_system::class,
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
@@ -196,6 +199,10 @@ return [
      //type ditulis di sini
     'types' => [
         // App\GraphQL\Type\PostType::class,
+
+        //PC
+        'PC' => App\GraphQL\Type\PC\PC::class,
+        'Computing_system' => App\GraphQL\Type\PC\Computing_system::class,
 
         //Monitor
         'Monitor' => App\GraphQL\Type\Monitor\Monitor::class,
