@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableMonitor extends Migration
+class CreateTableActivityTracker extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateTableMonitor extends Migration
      */
     public function up()
     {
-        Schema::create('monitors', function (Blueprint $table) {
+        Schema::create('activity_trackers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_display');
-            $table->integer('id_connectivity');
-            $table->integer('id_feature');
-            $table->integer('id_dimension');
-            $table->integer('id_power');
-            $table->integer('id_general');
+            $table->boolean('sleep_quality')->default(false);
+            $table->boolean('heart_rate')->default(false);
+            $table->boolean('steps')->default(false);
+            $table->boolean('hours_slept')->default(false);
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateTableMonitor extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('monitors');
+        Schema::dropIfExists('acivity_trackers');
     }
 }

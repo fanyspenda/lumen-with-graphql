@@ -128,7 +128,8 @@ return [
                 // 'PostQuery' => App\GraphQL\Query\PostQuery::class,
                 'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class,
                 'PcQuery' => App\GraphQL\Query\PcQuery::class,
-                'CameraQuery' => App\GraphQL\Query\CameraQuery::class
+                'CameraQuery' => App\GraphQL\Query\CameraQuery::class,
+                'SmartwatchQuery' => App\GraphQL\Query\SmartwatchQuery::class
             ],
             'mutation' => [
                 //input monitor
@@ -146,6 +147,11 @@ return [
                 'IPorts'=> App\GraphQL\Type\PC\IPorts::class,
                 'IMechanical'=> App\GraphQL\Type\PC\IMechanical::class,
                 'IMiscellaneous' => App\GraphQL\Type\PC\IMiscellaneous::class,
+
+                //input Smartwatch
+                'ISensors' => App\GraphQL\Type\Smartwatch\ISensors::class,
+                'IActivity_tracker' => App\GraphQL\Type\Smartwatch\IActivity_tracker::class,
+                'SmartwatchIConnectivity' => App\GraphQL\Type\Smartwatch\IConnectivity::class,
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
@@ -204,6 +210,12 @@ return [
      //type ditulis di sini
     'types' => [
         // App\GraphQL\Type\PostType::class,
+
+        //Smartwatch
+        'Smartwatch' => App\GraphQL\Type\Smartwatch\Smartwatch::class,
+        'Sensors' => App\GraphQL\Type\Smartwatch\Sensors::class,
+        'Activity_tracker' => App\GraphQL\Type\Smartwatch\Activity_tracker::class,
+        'SmartwatchConnectivity' => App\GraphQL\Type\Smartwatch\Connectivity::class,
 
         //PC
         'PC' => App\GraphQL\Type\PC\PC::class,
