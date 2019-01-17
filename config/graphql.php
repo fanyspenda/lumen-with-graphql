@@ -142,6 +142,10 @@ return [
                 //input PC
                 'IComputing_system' => App\GraphQL\Type\PC\IComputing_system::class,
                 'IGraphics'=> App\GraphQL\Type\PC\IGraphics::class,
+                'IStorage'=> App\GraphQL\Type\PC\IStorage::class,
+                'IPorts'=> App\GraphQL\Type\PC\IPorts::class,
+                'IMechanical'=> App\GraphQL\Type\PC\IMechanical::class,
+                'IMiscellaneous' => App\GraphQL\Type\PC\IMiscellaneous::class,
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
@@ -205,6 +209,10 @@ return [
         'PC' => App\GraphQL\Type\PC\PC::class,
         'Computing_system' => App\GraphQL\Type\PC\Computing_system::class,
         'Graphics'=> App\GraphQL\Type\PC\Graphics::class,
+        'Storage'=> App\GraphQL\Type\PC\Storage::class,
+        'Ports'=> App\GraphQL\Type\PC\Ports::class,
+        'Mechanical'=> App\GraphQL\Type\PC\Mechanical::class,
+        'Miscellaneous'=> App\GraphQL\Type\PC\Miscellaneous::class,
 
         //Monitor
         'Monitor' => App\GraphQL\Type\Monitor\Monitor::class,

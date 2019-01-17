@@ -6,6 +6,10 @@ use \Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 use App\Models\PC\Computing_system;
 use App\Models\PC\Graphic;
+use App\Models\PC\Storage;
+use App\Models\PC\Port;
+use App\Models\PC\Mechanical;
+use App\Models\PC\Miscellaneous;
 
 class PC extends GraphQLType{
     protected $attributes = [
@@ -45,18 +49,18 @@ class PC extends GraphQLType{
             'graphics' => [
                 'type' => Type::listOf(GraphQL::type('Graphics')),
             ],
-            // 'storage' => [
-            //     'type' => Type::listOf(GraphQL::type('Storage')),
-            // ],
-            // 'ports' => [
-            //     'type' => Type::listOf(GraphQL::type('Ports')),
-            // ],
-            // 'mechanical' => [
-            //     'type' => Type::listOf(GraphQL::type('Mechanical')),
-            // ],
-            // 'miscellaneous' => [
-            //     'type' => Type::listOf(GraphQL::type('miscellaneous')),
-            // ],
+            'storage' => [
+                'type' => Type::listOf(GraphQL::type('Storage')),
+            ],
+            'ports' => [
+                'type' => Type::listOf(GraphQL::type('Ports')),
+            ],
+            'mechanical' => [
+                'type' => Type::listOf(GraphQL::type('Mechanical')),
+            ],
+            'miscellaneous' => [
+                'type' => Type::listOf(GraphQL::type('Miscellaneous')),
+            ],
         ];
     }
 
@@ -68,5 +72,22 @@ class PC extends GraphQLType{
     public function resolveGraphicsField($root, $args)
     {
         return Graphic::where('id', $root->id_graphics)->get();
+    }
+
+    public function resolveStorageField($root, $args)
+    {
+        return Storage::where('id', $root->id_storage)->get();
+    }
+    public function resolvePortsField($root, $args)
+    {
+        return Port::where('id', $root->id_ports)->get();
+    }
+    public function resolveMechanicalField($root, $args)
+    {
+        return Mechanical::where('id', $root->id_mechanical)->get();
+    }
+    public function resolveMiscellaneousField($root, $args)
+    {
+        return Miscellaneous::where('id', $root->id_miscellaneous)->get();
     }
 }
