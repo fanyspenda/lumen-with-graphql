@@ -13,7 +13,7 @@ class CreateTableFeature extends Migration
      */
     public function up()
     {
-        Schema::create('features', function (Blueprint $table) {
+        Schema::create('monitor_features', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('titable')->nullable()->default(false);
             $table->boolean('anti_glare')->nullable()->default(false);

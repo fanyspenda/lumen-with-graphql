@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\PC;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\PC\Computing_system;
+use App\Models\PC\Pc_computing_system;
 
 class IComputing_system extends Mutation
 {
@@ -40,7 +40,7 @@ class IComputing_system extends Mutation
     public function resolve($root, $args)
     {
         
-        $computing_system = new Computing_system();
+        $computing_system = new Pc_computing_system();
         $computing_system->processor = $args['processor'];
         $computing_system->chipset = $args['chipset'];
         $computing_system->system_memory = $args['system_memory'];

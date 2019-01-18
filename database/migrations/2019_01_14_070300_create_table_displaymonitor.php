@@ -13,7 +13,7 @@ class CreateTableDisplaymonitor extends Migration
      */
     public function up()
     {
-        Schema::create('displays', function (Blueprint $table) {
+        Schema::create('monitor_displays', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('refresh_rate');
             $table->string('maximum_resolution');

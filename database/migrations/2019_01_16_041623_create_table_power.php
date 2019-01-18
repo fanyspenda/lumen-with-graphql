@@ -13,7 +13,7 @@ class CreateTablePower extends Migration
      */
     public function up()
     {
-        Schema::create('powers', function (Blueprint $table) {
+        Schema::create('monitor_powers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('power_consumption');
             $table->integer('power_saving');

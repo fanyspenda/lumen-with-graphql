@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableActivityTracker extends Migration
+class CreateTableSmartwatchFeature extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateTableActivityTracker extends Migration
      */
     public function up()
     {
-        Schema::create('smartwatch_activity_trackers', function (Blueprint $table) {
+        Schema::create('smartwatch_features', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('sleep_quality')->default(false);
-            $table->boolean('heart_rate')->default(false);
-            $table->boolean('steps')->default(false);
-            $table->boolean('hours_slept')->default(false);
+            $table->boolean('alarm_clock');
+            $table->boolean('reminder');
+            $table->boolean('stopwatch');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateTableActivityTracker extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acivity_trackers');
+        Schema::dropIfExists('smartwatch_features');
     }
 }

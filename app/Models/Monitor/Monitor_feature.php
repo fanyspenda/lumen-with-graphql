@@ -1,8 +1,9 @@
 <?php
+
 namespace App\Models\Monitor;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Connectivity extends Model{
+class Monitor_feature extends Model{
     
 }

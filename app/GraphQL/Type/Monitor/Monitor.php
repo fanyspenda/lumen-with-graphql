@@ -4,12 +4,12 @@ namespace App\GraphQL\Type\Monitor;
 use \GraphQL\Type\Definition\Type;
 use \Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
-use App\Models\Monitor\Display;
-use App\Models\Monitor\Connectivity;
-use App\Models\Monitor\Feature;
-use App\Models\Monitor\Dimension;
-use App\Models\Monitor\Power;
-use App\Models\Monitor\General;
+use App\Models\Monitor\Monitor_display;
+use App\Models\Monitor\Monitor_connectivity;
+use App\Models\Monitor\Monitor_feature;
+use App\Models\Monitor\Monitor_dimension;
+use App\Models\Monitor\Monitor_power;
+use App\Models\Monitor\Monitor_general;
 
 class Monitor extends GraphQLType{
     
@@ -70,30 +70,30 @@ class Monitor extends GraphQLType{
     //resolve yang di sini untuk mendapatkan nilai dari IDisplay
     public function resolveDisplayField($root, $args)
     {
-        return Display::where('id', $root->id_display)->get();
+        return Monitor_display::where('id', $root->id_display)->get();
     }
 
     public function resolveConnectivityField($root, $args)
     {
 
-        return Connectivity::where('id', $root->id_connectivity)->get();
+        return Monitor_connectivity::where('id', $root->id_connectivity)->get();
     }
 
     public function resolveFeatureField($root, $args)
     {
-        return Feature::where('id', $root->id_feature)->get();
+        return Monitor_feature::where('id', $root->id_feature)->get();
     }
 
     public function resolveDimensionField($root, $args)
     {
-        return Dimension::where('id', $root->id_dimension)->get();
+        return Monitor_dimension::where('id', $root->id_dimension)->get();
     }
     public function resolvePowerField($root, $args)
     {
-        return Power::where('id', $root->id_power)->get();
+        return Monitor_power::where('id', $root->id_power)->get();
     }
     public function resolveGeneralField($root, $args)
     {
-        return General::where('id', $root->id_general)->get();
+        return Monitor_general::where('id', $root->id_general)->get();
     }
 }

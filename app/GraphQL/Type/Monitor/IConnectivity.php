@@ -6,7 +6,7 @@ use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 
-use App\Models\Monitor\Connectivity;
+use App\Models\Monitor\Monitor_connectivity;
 
 class IConnectivity extends Mutation
 {
@@ -45,7 +45,7 @@ class IConnectivity extends Mutation
     public function resolve($root, $args)
     {
         
-        $connectivity = new Connectivity();
+        $connectivity = new Monitor_connectivity();
         $connectivity->number_of_dvi_inputs = $args['number_of_dvi_inputs'];
         $connectivity->number_of_hdmi_inputs = $args['number_of_hdmi_inputs'];
         $connectivity->headphone_jack = $args['headphone_jack'];

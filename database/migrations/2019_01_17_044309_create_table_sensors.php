@@ -13,7 +13,7 @@ class CreateTableSensors extends Migration
      */
     public function up()
     {
-        Schema::create('sensors', function (Blueprint $table) {
+        Schema::create('smartwatch_sensors', function (Blueprint $table) {
             $table->increments('id');            
             $table->boolean('accelerometer')->default(false);
             $table->timestamps();

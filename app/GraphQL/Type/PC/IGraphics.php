@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\PC;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\PC\Graphic;
+use App\Models\PC\Pc_graphic;
 
 class IGraphics extends Mutation
 {
@@ -36,7 +36,7 @@ class IGraphics extends Mutation
     public function resolve($root, $args)
     {
         
-        $graphics = new Graphic();
+        $graphics = new Pc_graphic();
         $graphics->graphics_engine = $args['graphics_engine'];
         $graphics->video_output = $args['video_output'];
         

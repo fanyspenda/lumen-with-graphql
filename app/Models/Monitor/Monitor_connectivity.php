@@ -3,5 +3,6 @@ namespace App\Models\Monitor;
 
 use Illuminate\Database\Eloquent\Model;
 
-class General extends Model{}
-?>
+class Monitor_connectivity extends Model{
+    
+}

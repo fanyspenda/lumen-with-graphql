@@ -13,7 +13,7 @@ class CreateTableMiscellaneous extends Migration
      */
     public function up()
     {
-        Schema::create('miscellaneouses', function (Blueprint $table) {
+        Schema::create('pc_miscellaneouses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('supported_os', 100);
             $table->text('accessories');

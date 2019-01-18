@@ -13,7 +13,7 @@ class CreateTableConnectivity extends Migration
      */
     public function up()
     {
-        Schema::create('connectivities', function (Blueprint $table) {
+        Schema::create('monitor_connectivities', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('number_of_dvi_inputs');
             $table->integer('number_of_hdmi_inputs');

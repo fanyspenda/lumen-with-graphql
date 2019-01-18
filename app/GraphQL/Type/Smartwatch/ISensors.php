@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Smartwatch;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\Smartwatch\Sensor;
+use App\Models\Smartwatch\Smartwatch_sensor;
 
 class ISensors extends Mutation
 {
@@ -32,7 +32,7 @@ class ISensors extends Mutation
     public function resolve($root, $args)
     {
         
-        $sensor = new Sensor();
+        $sensor = new Smartwatch_sensor();
         $sensor->accelerometer = $args['accelerometer'];
         
         $saved = $sensor->save();

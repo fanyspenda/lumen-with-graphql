@@ -4,6 +4,6 @@ namespace App\Models\PC;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Storage extends Model{
+class Pc_computing_system extends Model{
     
 }

@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\PC;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\PC\Storage;
+use App\Models\PC\Pc_storage;
 
 class IStorage extends Mutation
 {
@@ -44,7 +44,7 @@ class IStorage extends Mutation
     public function resolve($root, $args)
     {
         
-        $storage = new Storage();
+        $storage = new Pc_storage();
         $storage->mass_storage = $args['mass_storage'];
         $storage->msata = $args['msata'];
         $storage->m2 = $args['m2'];

@@ -13,7 +13,7 @@ class CreateTableStorage extends Migration
      */
     public function up()
     {
-        Schema::create('storages', function (Blueprint $table) {
+        Schema::create('pc_storages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mass_storage');
             $table->boolean('msata');

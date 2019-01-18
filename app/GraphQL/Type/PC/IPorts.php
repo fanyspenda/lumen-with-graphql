@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\PC;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\PC\Port;
+use App\Models\PC\Pc_port;
 
 class IPorts extends Mutation
 {
@@ -64,7 +64,7 @@ class IPorts extends Mutation
     public function resolve($root, $args)
     {
         
-        $port = new Port();
+        $port = new Pc_port();
         $port->audio = $args['audio'];
         $port->usb_port = $args['usb_port'];
         $port->lan = $args['lan'];

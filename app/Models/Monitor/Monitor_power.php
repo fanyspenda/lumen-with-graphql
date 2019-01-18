@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Models\Monitor;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Feature extends Model{
-    
-}
+class Monitor_power extends Model{}
+?>

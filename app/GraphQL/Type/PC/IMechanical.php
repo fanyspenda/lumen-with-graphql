@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\PC;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\PC\Mechanical;
+use App\Models\PC\Pc_mechanical;
 
 class IMechanical extends Mutation
 {
@@ -52,7 +52,7 @@ class IMechanical extends Mutation
     public function resolve($root, $args)
     {
         
-        $mechanical = new Mechanical();
+        $mechanical = new Pc_mechanical();
         $mechanical->kensington_lock = $args['kensington_lock'];
         $mechanical->led_indicators = $args['led_indicators'];
         $mechanical->power_supply = $args['power_supply'];

@@ -13,7 +13,7 @@ class CreateTablePorts extends Migration
      */
     public function up()
     {
-        Schema::create('ports', function (Blueprint $table) {
+        Schema::create('pc_ports', function (Blueprint $table) {
             $table->increments('id');
             $table->string('audio', 100);
             $table->string('usb_port', 100);

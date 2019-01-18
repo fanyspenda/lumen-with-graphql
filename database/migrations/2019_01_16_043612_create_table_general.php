@@ -13,7 +13,7 @@ class CreateTableGeneral extends Migration
      */
     public function up()
     {
-        Schema::create('generals', function (Blueprint $table) {
+        Schema::create('monitor_generals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('operating_system_compability', 50)->default('windows');
             $table->string('color', 50)->default('black');

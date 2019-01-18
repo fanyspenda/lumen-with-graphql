@@ -13,7 +13,7 @@ class CreateTableComputingSystem extends Migration
      */
     public function up()
     {
-        Schema::create('computing_systems', function (Blueprint $table) {
+        Schema::create('pc_computing_systems', function (Blueprint $table) {
             $table->increments('id');
             $table->string('processor', 100);
             $table->string('chipset', 80);

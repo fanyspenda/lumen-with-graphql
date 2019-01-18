@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\Monitor\Power;
+use App\Models\Monitor\Monitor_power;
 
 class IPower extends Mutation
 {
@@ -36,7 +36,7 @@ class IPower extends Mutation
     public function resolve($root, $args)
     {
         
-        $power = new Power();
+        $power = new Monitor_power();
         $power->power_consumption = $args['power_consumption'];
         $power->power_saving = $args['power_saving'];
         

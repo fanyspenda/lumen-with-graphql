@@ -152,6 +152,10 @@ return [
                 'ISensors' => App\GraphQL\Type\Smartwatch\ISensors::class,
                 'IActivity_tracker' => App\GraphQL\Type\Smartwatch\IActivity_tracker::class,
                 'SmartwatchIConnectivity' => App\GraphQL\Type\Smartwatch\IConnectivity::class,
+                'SmartwatchIDesign' => App\GraphQL\Type\Smartwatch\IDesign::class,
+                'SmartwatchIDisplay' => App\GraphQL\Type\Smartwatch\IDisplay::class,
+                'SmartwatchIFeatures' => App\GraphQL\Type\Smartwatch\IFeatures::class,
+                'SmartwatchINotifications' => App\GraphQL\Type\Smartwatch\INotifications::class,
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
             ]
@@ -216,6 +220,10 @@ return [
         'Sensors' => App\GraphQL\Type\Smartwatch\Sensors::class,
         'Activity_tracker' => App\GraphQL\Type\Smartwatch\Activity_tracker::class,
         'SmartwatchConnectivity' => App\GraphQL\Type\Smartwatch\Connectivity::class,
+        'SmartwatchDesign' => App\GraphQL\Type\Smartwatch\Design::class,
+        'SmartwatchDisplay' => App\GraphQL\Type\Smartwatch\Display::class,
+        'SmartwatchFeatures' => App\GraphQL\Type\Smartwatch\Features::class,
+        'SmartwatchNotifications' => App\GraphQL\Type\Smartwatch\Notifications::class,
 
         //PC
         'PC' => App\GraphQL\Type\PC\PC::class,

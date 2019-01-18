@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\PC;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\PC\Miscellaneous;
+use App\Models\PC\Pc_miscellaneous;
 
 class IMiscellaneous extends Mutation
 {
@@ -36,7 +36,7 @@ class IMiscellaneous extends Mutation
     public function resolve($root, $args)
     {
         
-        $misc = new Miscellaneous();
+        $misc = new Pc_miscellaneous();
         $misc->supported_os = $args['supported_os'];
         $misc->accessories = $args['accessories'];
         

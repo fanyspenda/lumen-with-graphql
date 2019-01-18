@@ -13,7 +13,7 @@ class CreateTableGraphics extends Migration
      */
     public function up()
     {
-        Schema::create('graphics', function (Blueprint $table) {
+        Schema::create('pc_graphics', function (Blueprint $table) {
             $table->increments('id');
             $table->string('graphics_engine', 100);
             $table->string('video_output');

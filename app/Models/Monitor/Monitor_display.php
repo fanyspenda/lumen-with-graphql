@@ -3,7 +3,7 @@ namespace App\Models\Monitor;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Display extends Model{
+class Monitor_display extends Model{
     
     protected $fillable = [
         'refresh_rate',

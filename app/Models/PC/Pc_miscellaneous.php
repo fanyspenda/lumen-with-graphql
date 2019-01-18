@@ -4,6 +4,6 @@ namespace App\Models\PC;
 
 use Illuminate\Database\Eloquent\Model;
 
-class miscellaneous extends Model{
+class Pc_miscellaneous extends Model{
     
 }

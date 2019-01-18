@@ -6,7 +6,7 @@ use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 
-use App\Models\Monitor\Dimension;
+use App\Models\Monitor\Monitor_dimension;
 
 class IDimension extends Mutation
 {
@@ -45,7 +45,7 @@ class IDimension extends Mutation
     public function resolve($root, $args)
     {
         
-        $dimension = new Dimension();
+        $dimension = new Monitor_dimension();
         $dimension->width = $args['width'];
         $dimension->depth = $args['depth'];
         $dimension->weight = $args['weight'];

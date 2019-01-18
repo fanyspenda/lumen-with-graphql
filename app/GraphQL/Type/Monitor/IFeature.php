@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\Monitor\Feature;
+use App\Models\Monitor\Monitor_feature;
 
 class IFeature extends Mutation
 {
@@ -47,7 +47,7 @@ class IFeature extends Mutation
 
     public function resolve($root, $args)
     {
-        $feature = new Feature();
+        $feature = new Monitor_feature();
         $feature->titable = $args['titable'];
         $feature->anti_glare = $args['anti_glare'];
         $feature->built_in_webcam = $args['built_in_webcam'];

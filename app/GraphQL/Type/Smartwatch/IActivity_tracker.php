@@ -6,7 +6,7 @@ use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
 
-use App\Models\Smartwatch\Activity_tracker;
+use App\Models\Smartwatch\Smartwatch_activity_tracker;
 
 class IActivity_tracker extends Mutation
 {
@@ -44,7 +44,7 @@ class IActivity_tracker extends Mutation
 
     public function resolve($root, $args)
     {
-        $actTracker = new Activity_tracker();
+        $actTracker = new Smartwatch_activity_tracker();
         $actTracker->sleep_quality = $args['sleep_quality'];
         $actTracker->heart_rate = $args['heart_rate'];
         $actTracker->steps = $args['steps'];

@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Monitor;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Mutation;
-use App\Models\Monitor\Display;
+use App\Models\Monitor\Monitor_display;
 
 class IDisplay extends Mutation
 {
@@ -83,7 +83,7 @@ class IDisplay extends Mutation
 
     public function resolve($root, $args)
     {
-        $display = new Display();
+        $display = new Monitor_display();
         $display->refresh_rate = $args['refresh_rate'];
         $display->maximum_resolution = $args['maximum_resolution'];
         $display->native_resolution = $args['native_resolution'];

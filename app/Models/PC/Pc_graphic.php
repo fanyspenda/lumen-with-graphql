@@ -4,6 +4,6 @@ namespace App\Models\PC;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Mechanical extends Model{
+class Pc_graphic extends Model{
     
 }

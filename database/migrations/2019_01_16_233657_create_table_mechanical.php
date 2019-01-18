@@ -13,7 +13,7 @@ class CreateTableMechanical extends Migration
      */
     public function up()
     {
-        Schema::create('mechanicals', function (Blueprint $table) {
+        Schema::create('pc_mechanicals', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('kensington_lock');
             $table->string('led_indicators', 100);
