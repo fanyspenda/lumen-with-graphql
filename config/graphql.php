@@ -161,6 +161,7 @@ return [
 
                 //input Tablet
                 'TabletIDisplay' => App\GraphQL\Type\Tablet\IDisplay::class,
+                'TabletICamera' => App\GraphQL\Type\Tablet\ICamera::class,
             ]
         ]
     ],
@@ -221,6 +222,7 @@ return [
         //Tablet
         'Tablet' => App\GraphQL\Type\Tablet\Tablet::class,
         'TabletDisplay' => App\GraphQL\Type\Tablet\Display::class,
+        'TabletCamera' => App\GraphQL\Type\Tablet\Camera::class,
 
         //Smartwatch
         'Smartwatch' => App\GraphQL\Type\Smartwatch\Smartwatch::class,
