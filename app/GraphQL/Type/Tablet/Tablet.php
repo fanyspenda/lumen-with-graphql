@@ -6,6 +6,8 @@ use \Folklore\GraphQL\Support\Type as GraphQLType;
 use GraphQL;
 use App\Models\Tablet\Tablet_display;
 use App\Models\Tablet\Tablet_camera;
+use App\Models\Tablet\Tablet_design;
+use App\Models\Tablet\Tablet_platform;
 
 class Tablet extends GraphQLType{
     protected $attributes = [
@@ -21,6 +23,12 @@ class Tablet extends GraphQLType{
             'id_camera' => [
                 'type' => Type::nonNull(Type::int()),
             ],
+            'id_design' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
+            'id_platform' => [
+                'type' => Type::nonNull(Type::int()),
+            ],
         ];
         return [
             'id' => [
@@ -32,6 +40,12 @@ class Tablet extends GraphQLType{
             'camera' => [
                 'type' => Type::listOf(GraphQL::type('TabletCamera')),
             ],
+            'design' => [
+                'type' => Type::listOf(GraphQL::type('TabletDesign')),
+            ],
+            'platform' => [
+                'type' => Type::listOf(GraphQL::type('TabletPlatform')),
+            ],
         ];
     }
 
@@ -42,5 +56,13 @@ class Tablet extends GraphQLType{
     public function resolveCameraField($root, $args)
     {
         return Tablet_camera::where('id', $root->id_display)->get();
+    }
+    public function resolveDesignField($root, $args)
+    {
+        return Tablet_design::where('id', $root->id_design)->get();
+    }
+    public function resolvePlatformField($root, $args)
+    {
+        return Tablet_platform::where('id', $root->id_platform)->get();
     }
 }

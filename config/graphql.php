@@ -162,6 +162,8 @@ return [
                 //input Tablet
                 'TabletIDisplay' => App\GraphQL\Type\Tablet\IDisplay::class,
                 'TabletICamera' => App\GraphQL\Type\Tablet\ICamera::class,
+                'TabletIDesign' => App\GraphQL\Type\Tablet\IDesign::class,
+                'TabletIPlatform' => App\GraphQL\Type\Tablet\IPlatform::class,
             ]
         ]
     ],
@@ -223,6 +225,8 @@ return [
         'Tablet' => App\GraphQL\Type\Tablet\Tablet::class,
         'TabletDisplay' => App\GraphQL\Type\Tablet\Display::class,
         'TabletCamera' => App\GraphQL\Type\Tablet\Camera::class,
+        'TabletDesign' => App\GraphQL\Type\Tablet\Design::class,
+        'TabletPlatform' => App\GraphQL\Type\Tablet\Platform::class,
 
         //Smartwatch
         'Smartwatch' => App\GraphQL\Type\Smartwatch\Smartwatch::class,
