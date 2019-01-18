@@ -129,7 +129,8 @@ return [
                 'MonitorQuery' => App\GraphQL\Query\MonitorQuery::class,
                 'PcQuery' => App\GraphQL\Query\PcQuery::class,
                 'CameraQuery' => App\GraphQL\Query\CameraQuery::class,
-                'SmartwatchQuery' => App\GraphQL\Query\SmartwatchQuery::class
+                'SmartwatchQuery' => App\GraphQL\Query\SmartwatchQuery::class,
+                'TabletQuery' => App\GraphQL\Query\TabletQuery::class,
             ],
             'mutation' => [
                 //input monitor
@@ -158,6 +159,8 @@ return [
                 'SmartwatchINotifications' => App\GraphQL\Type\Smartwatch\INotifications::class,
                 // 'PostMutation' => App\GraphQL\Mutation\PostMutation::class
 
+                //input Tablet
+                'TabletIDisplay' => App\GraphQL\Type\Tablet\IDisplay::class,
             ]
         ]
     ],
@@ -214,6 +217,10 @@ return [
      //type ditulis di sini
     'types' => [
         // App\GraphQL\Type\PostType::class,
+
+        //Tablet
+        'Tablet' => App\GraphQL\Type\Tablet\Tablet::class,
+        'TabletDisplay' => App\GraphQL\Type\Tablet\Display::class,
 
         //Smartwatch
         'Smartwatch' => App\GraphQL\Type\Smartwatch\Smartwatch::class,

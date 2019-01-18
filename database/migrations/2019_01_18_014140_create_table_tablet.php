@@ -15,6 +15,16 @@ class CreateTableTablet extends Migration
     {
         Schema::create('tablets', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_display');
+            $table->integer('id_camera');
+            $table->integer('id_design');
+            $table->integer('id_platform');
+            $table->integer('id_battery');
+            $table->integer('id_cellular');
+            $table->integer('id_connectivity');
+            $table->integer('id_features');
+            $table->integer('id_multimedia');
+
             $table->timestamps();
         });
     }
