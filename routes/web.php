@@ -15,5 +15,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/allPostApi', 'ControllerAPI@index');
-$router->post('/allPostApi', 'ControllerAPI@store');
+
+Route::get('/graphql', 'GraphQLController@query');
+Route::post('/graphql', 'GraphQLController@query');
+// Route::put('/graphql', 'GraphQLController@mutation');
+// Route::delete('/graphql', 'GraphQLController@mutation');
+

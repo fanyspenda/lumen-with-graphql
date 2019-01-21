@@ -59,9 +59,10 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([
+   //App\Http\Middleware\ExampleMiddleware::class
+   \Barryvdh\Cors\HandleCors::class,
+]);
 
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
@@ -77,6 +78,11 @@ $app->singleton(
 | totally optional, so you are not required to uncomment this line.
 |
 */
+
+//Cors 
+$app->configure('cors');
+$app->register(Barryvdh\Cors\ServiceProvider::class);
+
 //graphql
 $app->configure('graphql');
 $app->register(Folklore\GraphQL\LumenServiceProvider::class);

@@ -1,6 +1,4 @@
 <?php
-
-
 return [
 
     /*
@@ -32,7 +30,7 @@ return [
      *
      * 'routes' => null,
      */
-    'routes' => '{graphql_schema?}',
+    // 'routes' => '{graphql_schema?}',
 
     /*
      * The controller to use in GraphQL requests. Either a string that will apply
@@ -47,6 +45,13 @@ return [
      * ]
      */
     'controllers' => \Folklore\GraphQL\GraphQLController::class.'@query',
+
+    'routes' => [
+        'query' => 'query/{graphql_schema?}',
+        'mutation' => 'mutation/{graphql_schema?}',
+        'mutation' => 'graphiql'
+    ],
+
 
     /*
      * The name of the input variable that contain variables when you query the
@@ -70,7 +75,7 @@ return [
     /*
      * Any headers that will be added to the response returned by the default controller
      */
-    'headers' => [],
+    'headers' => ['Access-Control-Allow-Origin: *'],
 
     /*
      * Any JSON encoding options when returning a response from the default controller
